@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 10;
+  padding: 10;
+}
+
+.grid {
+  width: 420px;
+  height: 420px;
+  border: black 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  width: 15px;
+  height: 15px;
+  background-color: blue;
+}
