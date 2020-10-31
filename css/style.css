@@ -12,7 +12,7 @@ body {
   flex-wrap: wrap;
 }
 
-.grid div {
+.square {
   width: 15px;
   height: 15px;
   background-color: blue;
