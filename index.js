@@ -3,6 +3,7 @@ const width = 28;
 //pick out our grid and the rest of our necessary elements
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.getElementById('score');
+let squaresArray = [];
 /* layout
     28 * 28 = 784
    0 - pac-dots
@@ -41,4 +42,13 @@ const layout = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 
 ];
 
-
+//create board
+createBoard = () => {
+    for(let lay of layout) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        grid.append(square);
+        squaresArray.push(square);
+    }
+}
+createBoard();
