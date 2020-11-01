@@ -1,2 +1,2 @@
 # pac-man
- creating a basic pac-man game
+Basic Pac-man Game using vanilla JS.
