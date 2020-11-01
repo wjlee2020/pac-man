@@ -5,17 +5,16 @@ body {
 }
 
 .grid {
-  width: 420px;
-  height: 420px;
-  border: black 1px solid;
   display: flex;
   flex-wrap: wrap;
+  width: 420px;
+  height: 420px;
+  border: solid black;
 }
 
 .square {
   width: 15px;
   height: 15px;
-  background-color: blue;
 }
 
 .pac-dot {
@@ -28,7 +27,7 @@ body {
   background-color: blue;
 }
 
-.power-pallet {
+.power-pellet {
   background-color: green;
   border-radius: 7.5px;
 }
@@ -36,4 +35,10 @@ body {
 .pacman {
   background-color: yellow;
   border-radius: 7.5px;
+  box-sizing: border-box;
+  border: black solid 1px;
+}
+
+.ghost-lair {
+  background-color: #ccc;
 }
