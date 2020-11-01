@@ -126,9 +126,9 @@ control = (e) => {
                 !squaresArray[pacmanCurrentIndex - 1].classList.contains('ghost-lair') &&
                 !squaresArray[pacmanCurrentIndex - 1].classList.contains('wall') &&
                 pacmanCurrentIndex % width !== 0
-                ) {
+                ) 
                 pacmanCurrentIndex -= 1;
-                }
+                
                 if(pacmanCurrentIndex === 364) {
                     pacmanCurrentIndex = 391 
                 }
@@ -137,8 +137,8 @@ control = (e) => {
     squaresArray[pacmanCurrentIndex].classList.add('pacman');
     pacDotEaten();
     powerPelletEaten();
-    checkForWin();
     checkForGameOver();
+    checkForWin();
     
 }
 document.addEventListener('keyup', control);
@@ -258,7 +258,7 @@ checkForGameOver = () => {
         document.removeEventListener('keyup', control);
     //alert user that the game is over w/ score count (scoreDisplay => you lose)
         alert(`You just bombed the game! Your score was ${score}`)
-        scoreDisplay.innerText = `You Lose with ${score}`
+        scoreDisplay.innerText = `You Lose with ${score} 🗑`
         }
 }
 
@@ -271,7 +271,7 @@ checkForWin = () => {
         //tell the user they won + score
         alert(`You won game with ${score} ya bastard`)
         //display win
-        scoreDisplay.textContent = `Way to go with the big ${score}`
+        scoreDisplay.textContent = `🎆 Way to go with the big ${score} 🎆`
     }
 }
 
