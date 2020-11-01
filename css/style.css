@@ -2,6 +2,12 @@ html,
 body {
   margin: 10;
   padding: 10;
+  background: rgb(87, 10, 242);
+  background: linear-gradient(
+    45deg,
+    rgba(87, 10, 242, 1) 27%,
+    rgba(119, 109, 227, 1) 100%
+  );
 }
 
 .grid {
@@ -9,7 +15,8 @@ body {
   flex-wrap: wrap;
   width: 420px;
   height: 420px;
-  border: solid black;
+  background-color: white;
+  box-shadow: 3px 4px 100px rgba(253, 253, 253, 0.4);
 }
 
 .square {
@@ -24,7 +31,7 @@ body {
 }
 
 .wall {
-  background-color: blue;
+  background-color: rgba(87, 10, 242, 1);
 }
 
 .power-pellet {
@@ -65,5 +72,22 @@ body {
 
 .scared-ghost {
   background-color: aquamarine;
+  border: none;
+}
+
+/* layout */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button */
+button {
+  margin: 2em;
+  padding: 0.3rem 1.2rem;
+  border-radius: 15px;
   border: none;
 }

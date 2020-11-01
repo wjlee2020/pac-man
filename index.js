@@ -4,6 +4,8 @@ const scoreDisplay = document.getElementById('score')
 let squaresArray = [] /*created this to work with instead of using the 
 layout array, as we will push created squares (looped through the layout) into this array */
 let score = 0;
+const startBtn = document.getElementById('start-btn');
+
 
 
 // 0 - pacdots
@@ -124,8 +126,9 @@ control = (e) => {
                 !squaresArray[pacmanCurrentIndex - 1].classList.contains('ghost-lair') &&
                 !squaresArray[pacmanCurrentIndex - 1].classList.contains('wall') &&
                 pacmanCurrentIndex % width !== 0
-                ) 
+                ) {
                 pacmanCurrentIndex -= 1;
+                }
                 if(pacmanCurrentIndex === 364) {
                     pacmanCurrentIndex = 391 
                 }
@@ -237,6 +240,7 @@ moveGhost = (ghost) => {
             squaresArray[ghost.currentIndex].classList.add(ghost.className, 'ghost')
         }
         checkForGameOver();
+        checkForWin();
         
     }, ghost.speed)
 };
@@ -270,3 +274,10 @@ checkForWin = () => {
         scoreDisplay.textContent = `Way to go with the big ${score}`
     }
 }
+
+//restarting the game
+gameStart = () => {
+    window.location.reload();
+}
+
+startBtn.addEventListener('click', gameStart);
